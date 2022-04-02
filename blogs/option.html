@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="blog-info">
+        <h1 class="title-info">Optional chaining (?.)</h1>
+        <p>
+            The optional chaining operator provides a way to simplify accessing values through connected objects when it's possible that a reference or function may be undefined or null.
+    
+    For example, consider an object obj which has a nested structure. Without optional chaining, looking up a deeply-nested subproperty requires validating the references in between, such as:
+    
+    let nestedProp = obj.first && obj.first.second;
+    Copy to Clipboard
+    The value of obj.first is confirmed to be non-null (and non-undefined) before then accessing the value of obj.first.second. This prevents the error that would occur if you accessed obj.first.second directly without testing obj.first.
+    
+    With the optional chaining operator (?.), however, you don't have to explicitly test and short-circuit based on the state of obj.first before trying to access obj.first.second:
+    
+    let nestedProp = obj.first?.second;
+    Copy to Clipboard
+    By using the ?. operator instead of just ., JavaScript knows to implicitly check to be sure obj.first is not null or undefined before attempting to access obj.first.second. If obj.first is null or undefined, the expression automatically short-circuits, returning undefined.
+        </p>
+        <p>The optional chaining operator (?.) enables you to read the value of a property located deep within a chain of connected objects without having to check that each reference in the chain is valid.
+    
+            The ?. operator is like the . chaining operator, except that instead of causing an error if a reference is nullish (null or undefined), the expression short-circuits with a return value of undefined. When used with function calls, it returns undefined if the given function does not exist.
+            
+            This results in shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing. It can also be helpful while exploring the content of an object when there's no known guarantee as to which properties are required.
+            
+            Optional chaining cannot be used on a non-declared root object, but can be used with an undefined root object.</p>
+    
+    
+    
+    
+        <h2>Optional chaining with function calls</h2>
+        <p>You can use optional chaining when attempting to call a method which may not exist. This can be helpful, for example, when using an API in which a method might be unavailable, either due to the age of the implementation or because of a feature which isn't available on the user's device.
+    
+            Using optional chaining with function calls causes the expression to automatically return undefined instead of throwing an exception if the method isn't found:
+            
+            let result = someInterface.customMethod?.();</p>
+           
+    </div>
+
+    
+</body>
+</html>

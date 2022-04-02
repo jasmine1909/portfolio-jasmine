@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="blog-info">
+        <h1 class="title-info">A Simple Explanation of Scope in JavaScript</h1>
+        <p>Before diving into what the scope is, let's try an experiment that demonstrates how the scope manifests itself.
+    
+            Let's say you define a variable message:<br/>
+            
+            const message = 'Hello';<br/>
+            console.log(message); // 'Hello'<br/>
+            Then, you could easily log this variable in the next line after the declaration. No questions here.
+            
+            Now, let's move the declaration of message inside of an if code block:<br/>
+            
+            if (true) {<br/>
+              const message = 'Hello';<br/>
+            }<br/>
+    
+            console.log(message); // ReferenceError: message is not defined<br/>
+            This time, when trying to log the variable, JavaScript throws ReferenceError: message is not defined.
+            
+            Why does it happen?
+            
+            The if code block creates a scope for message variable. And message variable can be accessed only within this scope.
+            At a higher level, the accessibility of variables is limited by the scope where they're created. You are free to access the variable defined within its scope. But outside of its scope, the variable is inaccessible.
+    
+            Now, let's put down a general definition of scope:
+            
+            The scope is a policy that manages the accessibility of variables.</p>
+            <h2>Block scope</h2>
+            <ul>
+                <li>var is not block scoped:
+                    the code block creates a scope for variables declared using const and let. However, that's not the case of variables declared using var.
+                    
+                </li>
+                <li>Function scope:
+                    A function in JavaScript defines a scope for variables declared using var, let and const.
+                </li>
+                <li>Scopes can be nested</li>
+                <li>Global scope: The global scope is the outermost scope. It is accessible from any inner (aka local) scope.
+                    A variable declared inside the global scope is named global variable. Global variables are accessible from any scope.
+                </li>
+            </ul>
+            <h2>Conclusion</h2>
+            <p>The scope is a policy that manages the availability of variables. A variable defined inside a scope is accessible only within that scope, but inaccessible outside.
+    
+                In JavaScript, scopes are created by code blocks, functions, modules.
+                
+                While const and let variables are scoped by code blocks, functions or modules, var variables are scoped only by functions or modules.
+                
+                Scopes can be nested. Inside an inner scope you can access the variables of an outer scope.
+                
+                The lexical scope consists of the outer function scopes determined statically. Any function, no matter the place where being executed, can access the variables of its lexical scope (this is the concept of closure).</p>
+    </div>
+     
+</body>
+</html>

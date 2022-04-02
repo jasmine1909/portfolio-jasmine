@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="blog-info">
+        <h1 class="title-info">CSS position properties</h1>
+    <h2>Static positioning</h2>
+    <p>Every element has a static position by default, so the element will stick to the document flow. Elements with static positioning appear in the order they’re stacked. Without styling added, they won't overlap and different elements won't have different default values. The only reason to set an element to static is to remove positioning applied to it.></p>
+    <h2>Relative positioning</h2>
+    <p>An element set to relative is positioned relative to its normal position. A relative setting without other positioning attributes added (top, left, bottom, or right), will not be affected. This is because it’s relative to itself exactly as if you left it as static. Setting the top, right, bottom, and left properties of a relative element will move it away from its normal position. Other content won't adjust to fit into any gap left by the element.</p>
+    <h2>Absolute positioning</h2>
+    <p>To remove an element from the normal document flow, absolute position is a great option. The position of an absolute element isn’t affected by other elements and doesn’t affect the position of other elements. </p>
+    <h2>Sticky positioning</h2>
+    <p>A sticky element is relative to the document flow until a defined scroll position is reached. At that point, it switches to the behavior of a fixed element within its direct parent. Once the sticky element hits the bottom of its parent, it will stop scrolling.
+
+        You must specify at least one position value for the top, bottom, left, or right side for sticky positioning to work. Position sticky may not work correctly if any parent element has a set height or overflow set to hidden, scroll, or auto.</p>
+    <h2>Fixed positioning</h2>
+    <p>When you scroll down the page, fixed elements stay fixed in their positions. This position setting is often used for fixed navigations.</p>
+    </div>
+</body>
+</html>

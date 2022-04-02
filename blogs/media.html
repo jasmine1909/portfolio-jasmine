@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="blog-info">
+        <h1 class="title-info">CSS Media Queries</h1>
+        <h2>Do you really need CSS media queries?</h2>
+        <p>Media queries are a powerful tool in your CSS toolbox with exciting hidden gems. But if you accomodate your design to every possible situation you’ll end up with a codebase that’s too complex to maintain and, as we all know, CSS is like a bear cub: cute and inoffensive but when it grows it will eat you alive.</p>
+        <h2>Media types</h2>
+        <ul>Media types describe the general category of a device. Except when using the not or only logical operators, the media type is optional and the all type is implied.
+    
+           <li> all: Suitable for all devices.</li>
+            
+            <li>print: Intended for paged material and documents viewed on a screen in print preview mode. (Please see paged media for information about formatting issues that are specific to these formats.)
+                </li>
+            <li>screen: Intended primarily for screens.</li></ul>
+        
+        <h2>Using min- and max- to match value ranges</h2>
+        <p>Many of the media features outlined in the previous section — including width, height, color and color-index — can be prefixed with min- or max- to express minimum or maximum constraints. We’ve already seen these in use throughout many of the examples, but the point is that we can create a range of value to match instead of having to declare specific values.</p>
+        <h2>Nesting and complex decision making</h2>
+        <p>CSS allows you to nest at-rules or group statements using parentheses, making it possible to go as deep as we want to evaluate complex operations.
+    
+            @media (min-width: 20em), not all and (min-height: 40em) {  
+              @media not all and (pointer: none) { ... }
+              @media screen and ( (min-width: 50em) and (orientation: landscape) ), print and ( not (color) ) { ... }
+            }</p>
+        
+    </div>
+
+
+
+
+</body>
+</html>

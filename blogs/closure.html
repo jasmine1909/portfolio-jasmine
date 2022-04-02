@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="blog-info">
+        <h1 class="title-info">Closures in JavaScript</h1>
+    <h2>What is a closure?</h2>
+    <p>A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function’s variables — a scope chain.
+        The closure has three scope chains:
+        <ul>
+         <li>it has access to its own scope — variables defined between its curly brackets</li>
+        <li>it has access to the outer function’s variables</li>
+        <li>it has access to the global variables</li>
+    </ul></p>
+    <p>Closures are useful because they let you associate data (the lexical environment) with a function that operates on that data. This has obvious parallels to object-oriented programming, where objects allow you to associate data (the object's properties) with one or more methods.
+
+        Consequently, you can use a closure anywhere that you might normally use an object with only a single method.
+        
+        Situations where you might want to do this are particularly common on the web. Much of the code written in front-end JavaScript is event-based. You define some behavior, and then attach it to an event that is triggered by the user (such as a click or a keypress). The code is attached as a callback (a single function that is executed in response to the event).</p>
+    <h2>Closure Scope Chain</h2>
+    <p>Every closure has three scopes:
+        <ul>
+            <li>Local Scope (Own scope)</li>
+            <li>Outer Functions Scope</li>
+            <li>Global Scope</li>
+        </ul>
+
+        </p>
+    </div>
+</body>
+</html>
