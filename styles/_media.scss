@@ -197,6 +197,10 @@
     .portfolios{
         grid-template-columns: repeat(1, 1fr);
     }
+    .skill-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width:1070px){
